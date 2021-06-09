@@ -7,3 +7,8 @@ build/
 
 # images
 images/
+
+# logs
+*.log
+*.logs
+log/

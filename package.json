@@ -4,7 +4,9 @@
   "description": "react project template with typescript",
   "main": "./src/index.tsx",
   "scripts": {
-    "start": "webpack serve --config webpack/webpack.config.js --open",
+    "start": "webpack serve --config webpack/webpack.config.js --env env=dev --open",
+    "build": "webpack --config webpack/webpack.config.js --env env=prod",
+    "serve": "npx serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -38,7 +40,8 @@
     "typescript": "^4.3.2",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
   },
   "bugs": {
     "url": "https://github.com/jankenshow/react_template/issues"
