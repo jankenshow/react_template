@@ -1,0 +1,30 @@
+{
+  "name": "react_template",
+  "version": "1.0.0",
+  "description": "react project template with typescript",
+  "main": "./src/index.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jankenshow/react_template.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "typescript",
+    "webpack@5",
+    "node@14.17.0"
+  ],
+  "author": "jankenshow",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "bugs": {
+    "url": "https://github.com/jankenshow/react_template/issues"
+  },
+  "homepage": "https://github.com/jankenshow/react_template#readme"
+}
