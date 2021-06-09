@@ -4,6 +4,7 @@
   "description": "react project template with typescript",
   "main": "./src/index.tsx",
   "scripts": {
+    "start": "webpack serve --config webpack/webpack.config.js --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,8 +21,22 @@
   "author": "jankenshow",
   "license": "MIT",
   "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/react": "^17.0.10",
+    "@types/react-dom": "^17.0.7",
+    "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^5.3.1",
+    "typescript": "^4.3.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   },
   "bugs": {
     "url": "https://github.com/jankenshow/react_template/issues"
