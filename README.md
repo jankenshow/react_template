@@ -1,7 +1,8 @@
 
 ## node version
-node 14.17.0  
-npm 7.16.0
+node@14.17.0  
+npm@7.16.0
+yarn@1.22.10
 
 ## installation
 execute command below in project root directory.

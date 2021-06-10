@@ -1,5 +1,5 @@
 # node
-.node_version
+.node-version
 node_modules
 
 # build
