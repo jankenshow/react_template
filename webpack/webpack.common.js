@@ -1,8 +1,9 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+// const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
-    mode: "development",
+    mode: 'development',
     entry: path.resolve(__dirname, '..', './src/index.tsx'),
     output: {
         path: path.resolve(__dirname, '..', './build'),
@@ -18,7 +19,7 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     {
-                    loader: 'babel-loader',
+                        loader: 'babel-loader',
                     },
                 ],
             },
@@ -32,14 +33,17 @@ module.exports = {
             },
             {
                 test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-                type: "asset/inline",
-            }
+                type: 'asset/inline',
+            },
         ],
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '..', './src/html/index.html'),
         }),
+        // new CopyPlugin({
+        //     patterns: [{ from: 'source', to: 'dest' }],
+        // }),
     ],
     stats: 'errors-only',
 }
