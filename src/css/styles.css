@@ -14,8 +14,8 @@
 body {
     display: grid;
     min-height: 100vh;
-    /* place-items: center; */
-    place-self: center;
+    place-items: center;
+    /* place-self: center; */
     line-height: 1.6;
     background: var(--clr-neutral-110);
 }
@@ -35,5 +35,14 @@ h1 {
 
 .card-react-content {
     padding: 1.5em;
-    background: linear-gradient(#e66465, #9198e5);
+    /* background: linear-gradient(#e66465, #9198e5); */
+    background: linear-gradient(
+        hsla(10, 0%, 30%, 0),
+        hsla(10, 0%, 30%, 0.5) 15%,
+        hsla(10, 0%, 30%, 1)
+    );
+}
+
+.img-content {
+    display: inline-block;
 }

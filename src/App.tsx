@@ -11,7 +11,7 @@ export const App = () => {
                 Edited React Typescript Webpack Starter Template - {name}
                 {process.env.NODE_ENV} {process.env.name}
             </h1>
-            <div className="card-react">
+            <div className="card-react img-content">
                 <div className="card-react-content">
                     <h2 className="card-react-title">text</h2>
                     <p className="card-react-body">
@@ -21,7 +21,12 @@ export const App = () => {
                 </div>
             </div>
             {/* <img src={IMAGE} alt="React Logo" width="300" height="200" /> */}
-            <img src={LOGO} alt="React Logo" width="300" />
+            <img
+                className="img-content"
+                src={LOGO}
+                alt="React Logo"
+                width="300"
+            />
             <ClickCounter />
         </>
     )
