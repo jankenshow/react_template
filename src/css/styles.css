@@ -37,12 +37,17 @@ h1 {
     padding: 1.5em;
     /* background: linear-gradient(#e66465, #9198e5); */
     background: linear-gradient(
-        hsla(10, 0%, 30%, 0),
-        hsla(10, 0%, 30%, 0.5) 15%,
-        hsla(10, 0%, 30%, 1)
+        hsla(10, 0%, 15%, 0),
+        hsla(10, 0%, 15%, 0.5) 15%,
+        hsla(10, 0%, 15%, 1)
     );
 }
 
 .img-content {
     display: inline-block;
+}
+
+.counter {
+    margin: 10px 0px 10px 100px;
+    padding: 10px 10px 10px 50px;
 }
