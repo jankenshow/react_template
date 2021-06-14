@@ -35,5 +35,5 @@ h1 {
 
 .card-react-content {
     padding: 1.5em;
-    background: black;
+    background: linear-gradient(#e66465, #9198e5);
 }

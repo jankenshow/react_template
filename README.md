@@ -16,7 +16,9 @@ $ yarn
 
 ## start dev server
 
-execute command below in project root directory, and the page will open on your browser automatically.
+execute command below in project root directory, ~~and the page will open on your browser automatically~~.
+
+-> use vscode debugger (Debugger for Chrome extension) or open `localhost:8080` by yourself to see the page.
 
 ```
 $ yarn start
