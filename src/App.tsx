@@ -1,7 +1,7 @@
 // import IMAGE from './images/react.png'
 // import LOGO from './images/logo.svg'
 import { Card } from './Card'
-// import { ClickCounter } from './ClickCounter'
+import { ClickCounter } from './ClickCounter'
 
 export const App = () => {
     const name = 'sample'
@@ -24,7 +24,7 @@ export const App = () => {
                 alt="React Logo"
                 width="300"
             /> */}
-            {/* <ClickCounter /> */}
+            <ClickCounter />
         </>
     )
 }
