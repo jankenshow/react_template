@@ -1,0 +1,181 @@
+:root {
+    --clr-neutral-900: hsl(207, 19%, 9%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-400: hsl(142, 90%, 61%);
+    --clr-neutral-110: hsl(10, 10%, 90%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    /* place-items: center; */
+    place-self: center;
+    line-height: 1.6;
+    background: var(--clr-neutral-900);
+    font-family: sans-serif;
+}
+
+h1 {
+    margin: 3rem 0 3rem 5rem;
+    color: skyblue;
+    font-weight: bold;
+    text-decoration: underline;
+    text-shadow: 0 0 0.2em rgba(255, 255, 255, 0.5);
+    // text-shadow: 0 0.01em 0 #999, 0 0.02em 0 #888, 0 0.03em 0 #777,
+    //     0 0.04em 0 #666, 0 0.05em 0 #555, 0 0.06em 0 #444, 0 0.08em 0 #000;
+}
+
+.cards {
+    padding: 2rem 12rem 5rem 12rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-react {
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-end; */
+    color: var(--clr-neutral-100);
+    background-image: url(../images/react.png);
+    background-position: center center;
+    background-size: cover;
+    padding: 3rem 0 0;
+    width: 25ch;
+    height: 30ch;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    transition: transform 500ms ease;
+}
+
+.card-react:hover,
+.card-react:focus-within {
+    transform: scale(1.05);
+}
+
+.card-react-content {
+    --padding: 1.5rem;
+    padding: var(--padding);
+    /* background: linear-gradient(#e66465, #9198e5); */
+    background: linear-gradient(
+        hsla(10, 0%, 10%, 0),
+        hsla(10, 0%, 12%, 0.6) 15%,
+        hsla(10, 0%, 15%, 1)
+    );
+    border-radius: 1rem;
+    // transform: translateY(65%);
+    // transition: transform 500ms ease;
+    // transition-delay: 500ms;
+}
+
+@media (hover) {
+    .card-react-content {
+        transform: translateY(65%);
+        transition: transform 500ms ease;
+    }
+
+    .card-react:hover .card-react-content,
+    .card-react:focus-within .card-react-content {
+        transform: translateY(0);
+        transition-delay: 500ms;
+    }
+
+    .card-react:focus-within .card-react-content {
+        transition-duration: 0ms;
+    }
+
+    .card-react-content > *:not(.card-react-title) {
+        opacity: 0;
+        transition: opacity 700ms linear;
+    }
+
+    .card-react:hover .card-react-content > *:not(.card-react-title),
+    .card-react:focus-within .card-react-content > *:not(.card-react-title) {
+        opacity: 1;
+        transition-delay: 700ms;
+    }
+
+    .card-react-title::after {
+        transform: scaleX(0);
+    }
+}
+
+.card-react-title {
+    position: relative;
+    width: max-content;
+    color: white;
+    // color: hsl(0, 77%, 63%);
+    /* border: 1px solid red; */
+}
+
+.card-react-title::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: calc(var(--padding) * -1);
+    bottom: 0;
+    width: calc(100% + var(--padding));
+    background: var(--clr-neutral-400);
+    // transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+
+.card-react:hover .card-react-title::after,
+.card-react:focus-within .card-react-title::after {
+    transform: scale(1);
+}
+
+.card-react-body {
+    color: rgba(255 255 255 / 0.85);
+}
+
+.card-react-button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: underline;
+    color: var(--clr-neutral-900);
+    background-color: var(--clr-neutral-400);
+    padding: 0.5em 1.25em;
+    border-radius: 0.25em;
+}
+
+.card-react-button:hover,
+.card-react-button:focus {
+    background-color: var(--clr-neutral-400);
+}
+
+// .img-content {
+//     display: inline-block;
+// }
+
+.counter {
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 50px;
+    text-align: center;
+}
+
+.counter-count {
+    color: aliceblue;
+    font-size: larger;
+    display: inline-block;
+}
+
+button.counter-button {
+    color: aliceblue;
+    background-color: var(--clr-neutral-900);
+    display: inline-block;
+}
+
+button.counter-button:hover,
+button.counter-button:focus {
+    color: skyblue;
+    background-color: var(--clr-neutral-100);
+}

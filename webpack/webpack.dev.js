@@ -7,6 +7,39 @@ module.exports = {
         hot: true,
         open: false,
     },
+    module: {
+        rules: [
+            {
+                test: /\.(sc|c)ss/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            url: true,
+                            sourceMap: true,
+                            importLoaders: 2,
+                        },
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: true,
+                            postcssOptions: {
+                                plugins: [['autoprefixer', { grid: true }]],
+                            },
+                        },
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
+                ],
+            },
+        ],
+    },
     devtool: 'cheap-module-source-map',
     plugins: [
         new webpack.DefinePlugin({
