@@ -1,0 +1,41 @@
+{
+    "dependencies": {
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.14.3",
+        "@babel/plugin-transform-runtime": "^7.14.5", // Babelによって注入されるヘルパーコードを、再利用可能なヘルパーをインポートする形に変換するプラグイン。ファイルサイズが小さくなる。
+        "@babel/preset-env": "^7.14.4", // 出力するECMAscriptのバージョンを指定する
+        "@babel/preset-react": "^7.13.13", // presetにreactを追加
+        "@babel/preset-typescript": "^7.13.0",
+        "@babel/runtime": "^7.14.5", // runtime本体。plugin-transform-runtimeを動作するのに必要らしい？
+        "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3", // react用のHMRを提供
+        "@types/react": "^17.0.10", // reactの型定義
+        "@types/react-dom": "^17.0.7",
+        "@typescript-eslint/eslint-plugin": "^4.26.1", // typescriptのlintツール
+        "@typescript-eslint/parser": "^4.26.1", // typescriptのlintツール
+        "babel-loader": "^8.2.2", // webpackでbabelを動かすためのローダー
+        "copy-webpack-plugin": "^9.0.0", // ビルド時にファイルをそのままコピーするためのwebpackプラグイン
+        "css-loader": "^5.2.6", // cssの読み込み
+        "eslint": "^7.28.0", // lintツール
+        "eslint-config-prettier": "^8.3.0", // prettierの設定をeslintで読み込む的なやつ
+        "eslint-plugin-import": "^2.23.4", // import関連のlintを行う
+        "eslint-plugin-jsx-a11y": "^6.4.1", // jsxのルール
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-react": "^7.24.0",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "html-webpack-plugin": "^5.3.1", // webpackでhtmlの変更を検知するなど。
+        "husky": "4", // git hooks の設定を package.json などからできるようにしてくれるツール
+        "lint-staged": "^11.0.0", // ステージングしたファイルに対して指定のコマンド(今回はlint, format)を実行できるツール
+        "prettier": "^2.3.1", // formatter
+        "react-refresh": "^0.10.0", // HMR
+        "style-loader": "^2.0.0", // cssの読み込みのためのツール
+        "typescript": "^4.3.2",
+        "webpack": "^5.38.1",
+        "webpack-bundle-analyzer": "^4.4.2", // ビルド時にファイルのサイズなど、詳細を確認できる。
+        "webpack-cli": "^4.7.2",
+        "webpack-dev-server": "^3.11.2",
+        "webpack-merge": "^5.8.0" // 分割した設定ファイルを一つにまとめるやつ
+    }
+}
