@@ -6,6 +6,7 @@ module.exports = {
     devServer: {
         hot: true,
         open: false,
+        historyApiFallback: true,
     },
     module: {
         rules: [

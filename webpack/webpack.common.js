@@ -8,8 +8,12 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, '..', './build'),
         filename: 'bundle.js',
+        publicPath: '/',
     },
     resolve: {
+        alias: {
+            '~': path.join(__dirname, '../src/'),
+        },
         extensions: ['.tsx', '.ts', '.js'],
     },
     module: {
@@ -31,11 +35,16 @@ module.exports = {
                 test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
                 type: 'asset/inline',
             },
+            {
+                test: /\.ttf$/,
+                type: 'asset/resource',
+            },
         ],
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '..', './src/html/index.html'),
+            favicon: path.resolve(__dirname, '..', './src/images/logo.svg'),
         }),
         // new CopyPlugin({
         //     patterns: [{ from: 'source', to: 'dest' }],
